@@ -14,13 +14,13 @@ sub_multiple : multiple.o
 	${CROSS_COMPILE}${CC} $^ -o $@ ../../lib/libmosquitto.so.${SOVERSION}
 
 callback.o : callback.c ../../lib/libmosquitto.so.${SOVERSION}
-	${CROSS_COMPILE}${CC} -c $< -o $@ -I../../lib ${CFLAGS}
+	${CROSS_COMPILE}${CC} -c $< -o $@ -I../../include ${CFLAGS}
 
 single.o : single.c ../../lib/libmosquitto.so.${SOVERSION}
-	${CROSS_COMPILE}${CC} -c $< -o $@ -I../../lib ${CFLAGS}
+	${CROSS_COMPILE}${CC} -c $< -o $@ -I../../include ${CFLAGS}
 
 multiple.o : multiple.c ../../lib/libmosquitto.so.${SOVERSION}
-	${CROSS_COMPILE}${CC} -c $< -o $@ -I../../lib ${CFLAGS}
+	${CROSS_COMPILE}${CC} -c $< -o $@ -I../../include ${CFLAGS}
 
 ../../lib/libmosquitto.so.${SOVERSION} :
 	$(MAKE) -C ../../lib

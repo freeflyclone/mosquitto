@@ -106,3 +106,6 @@ obj-*/
 tmp/
 examples/publish/basic-1
 examples/subscribe/basic-1
+examples/subscribe_simple/sub_multiple
+examples/subscribe_simple/sub_single
+examples/subscribe_simple/sub_callback
