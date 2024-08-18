@@ -104,3 +104,5 @@ obj-*/
 
 # Others
 tmp/
+examples/publish/basic-1
+examples/subscribe/basic-1
